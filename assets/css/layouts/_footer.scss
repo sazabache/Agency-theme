@@ -1,0 +1,48 @@
+footer {
+    padding: 25px 0;
+    text-align: center;
+    .copyright {
+        text-transform: uppercase;
+        text-transform: none;
+        font-family: $fuente-montserrat;
+        line-height: 40px;
+    }
+    .quicklinks {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-transform: none;
+        font-family: $fuente-montserrat;
+        line-height: 40px;
+        a {
+            color: $amarillo;
+            &:hover{
+                color: $amarillo-oscuro;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.social-buttons {
+        margin-bottom: 0;
+        a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            font-size: 20px;
+            line-height: 40px;
+            outline: 0;
+            color: $blanco;
+            background-color: $negro;
+            border: 1px solid $negro;
+            &:hover, &:focus, &:active {
+                background-color: transparent;
+                text-decoration: none;
+                border: 1px solid $amarillo;
+                color: $amarillo;
+            }
+        }
+    }
+
+

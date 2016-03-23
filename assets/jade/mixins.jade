@@ -1,0 +1,28 @@
+mixin page-scroll(name , href)
+	li: a.page-scroll(class!=attributes.class, href=href)= name
+
+mixin row(title , text)
+	.row
+		.col-md-12.text-center
+			h2.section-heading= title
+			h3.section-subheading.text-muted= text
+			if block
+				block
+
+mixin sector(title , text)
+	h4.service-heading= title
+	p.text-muted= text
+	if block
+		block
+
+mixin portfolio(title , text)
+	h4= title
+	p.text-muted= text
+	if block
+		block
+
+mixin date(title , text)
+	h4= title
+	h4.subheading= text
+	if block
+		block

@@ -1,0 +1,245 @@
+include mixins
+doctype
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Agency theme
+		link(href="css/bootstrap.min.css" rel="stylesheet")
+		link(href="css/main.css" rel="stylesheet")
+		link(href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")		
+	
+	body#pagetop.index
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container
+				.navbar-header.page-scroll
+					button.navbar-toggle(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand.page-scroll(href="#") Start Bootstrap
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right.text-center
+						li.hidden
+							a(href="#page-top")
+						+page-scroll('Services', '#services')
+						+page-scroll('Portfolio', '#portfolio')
+						+page-scroll('About', '#about')
+						+page-scroll('Team', '#team')
+						+page-scroll('Contact', '#contact')
+		header
+			.container
+				.intro-text
+					.intro-lead-in Welcome to Our Studio!
+					.intro-heading It's Nice to Meet You
+					a#services.page-scroll.btn.btn-xl Tell me more
+		section#services
+			.container
+				+row('Services', 'Lorem ipsum dolor sit amet consectetur')
+				.row.text-center
+					.col-md-4
+						span.fa-stack.fa-4x
+							.fa-stack-2x.circle
+							i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+						+sector('E-Commerce', 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.')
+					.col-md-4
+						span.fa-stack.fa-4x
+							.fa-stack-2x.circle
+							i.fa.fa-laptop.fa-stack-1x.fa-inverse
+						+sector('Responsive Design', 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.')
+					.col-md-4
+						span.fa-stack.fa-4x
+							.fa-stack-2x.circle
+							i.fa.fa-lock.fa-stack-1x.fa-inverse
+						+sector('Web Security', 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.')
+		section#portfolio.bg-light-gray
+			.container
+				+row('Portfolio', 'Lorem ipsum dolor sit amet consectetur')
+				.row
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal1" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/roundicons.png")
+						.portfolio-caption
+							+portfolio('Round Icons' , 'Graphic Design')
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal2" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/startup-framework.png")
+						.portfolio-caption
+							+portfolio('Startup Framework' , 'Website Design')
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal3" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/treehouse.png")
+						.portfolio-caption
+							+portfolio('Treehouse' , 'Website Design')
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal4" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/golden.png")
+						.portfolio-caption
+							+portfolio('Golden' , 'Website Design')
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal4" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/escape.png")
+						.portfolio-caption
+							+portfolio('Escape' , 'Website Design')
+					.col-md-4.col-sm-6.portfolio-item
+						a.portfolio-link(href="#portfolioModal4" data-toggle="modal")
+							img.img-responsive(src="../img/portfolio/dreams.png")
+						.portfolio-caption
+							+portfolio('Dreams' , 'Website Design')
+		section#about
+			.container
+				+row('About', 'Lorem ipsum dolor sit amet consectetur')
+				.row
+					.col-md-12
+						ul.timeline
+							li
+								.timeline-image
+									img.img-circle.img-responsive(src="../img/about/1.jpg")
+								.timeline-panel
+									.timeline-heading
+										+date('2009-2011' , 'Our Humble Beginnigs')
+									.timeline-body
+										p.textmuted Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+							li.timeline-inverted
+								.timeline-image
+									img.img-circle.img-responsive(src="../img/about/2.jpg")
+								.timeline-panel
+									.timeline-heading
+										+date('March 2011' , 'An Agency is Born')
+									.timeline-body
+										p.textmuted Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+							li
+								.timeline-image
+									img.img-circle.img-responsive(src="../img/about/3.jpg")
+								.timeline-panel
+									.timeline-heading
+										+date('December 2012' , 'Transition to Full Service')
+									.timeline-body
+										p.textmuted Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+							li.timeline-inverted
+								.timeline-image
+									img.img-circle.img-responsive(src="../img/about/4.jpg")
+								.timeline-panel
+									.timeline-heading
+										+date('July 2014' , 'Phase to expansion')
+									.timeline-body
+										p.textmuted Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+							li.timeline-inverted
+								.timeline-image
+									h4 Be Part <br> Of Our <br> Story!
+		section#team.bg-light-gray
+			.container
+				+row('Our Amazing Team', 'Lorem ipsum dolor sit amet consectetur')
+				.row
+					.col-sm-4.text-center
+						.team-member
+							img.img-circle.img-responsive(src="../img/team/1.jpg")
+							h4 Kay Garland
+							p.text-muted Lead Designer
+							ul.list-inline.social-buttons
+								li: a(href= "#")
+									i.fa.fa-twitter
+								li: a(href= "#")
+									i.fa.fa-facebook
+								li: a(href= "#")
+									i.fa.fa-linkedin
+					.col-sm-4.text-center
+						.team-member
+							img.img-circle.img-responsive(src="../img/team/2.jpg")
+							h4 Larry Parker
+							p.text-muted Lead Marketer
+							ul.list-inline.social-buttons
+								li: a(href= "#")
+									i.fa.fa-twitter
+								li: a(href= "#")
+									i.fa.fa-facebook
+								li: a(href= "#")
+									i.fa.fa-linkedin
+					.col-sm-4.text-center
+						.team-member
+							img.img-circle.img-responsive(src="../img/team/3.jpg")
+							h4 Diana Pertersen
+							p.text-muted Lead Developer
+							ul.list-inline.social-buttons
+								li: a(href= "#")
+									i.fa.fa-twitter
+								li: a(href= "#")
+									i.fa.fa-facebook
+								li: a(href= "#")
+									i.fa.fa-linkedin
+				.row
+					.col-md-8.col-md-offset-2.text-center
+						p.large.text-muted Lorem ipsum dolor sit amet consectetur adipiscing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+		aside.clients
+			.container
+				.row
+					.col-md-3.col-sm-6
+						a(href= "#")
+							img.img-responsive.img-centered(src="../img/logos/envato.jpg")
+					.col-md-3.col-sm-6
+						a(href= "#")
+							img.img-responsive.img-centered(src="../img/logos/designmodo.jpg")
+					.col-md-3.col-sm-6
+						a(href= "#")
+							img.img-responsive.img-centered(src="../img/logos/themeforest.jpg")
+					.col-md-3.col-sm-6
+						a(href= "#")
+							img.img-responsive.img-centered(src="../img/logos/creative-market.jpg")
+		section#contact
+			.container
+				+row('Contact Us', 'Lorem ipsum dolor sit amet consectetur')
+				.row
+					.col-md-12
+						form#contactForm(name="sentMessage" novalidate)
+							.row
+								.col-md-6
+									.form-group
+										input.form-control#name(type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.")
+										p.help-block.text-danger
+									.form-group
+										input.form-control#name(type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.")
+										p.help-block.text-danger
+									.form-group
+										input.form-control#name(type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.")
+										p.help-block.text-danger
+
+								.col-md-6
+									.form-group
+										textarea.form-control#message(placeholder="Your Message *" required data-validation-required-message="Please enter a message.")
+										p.help-block.text-danger
+								.clearfix
+									.col-md-12.text-center
+										#success
+										button.btn.btn-xl(type="submit") Send Message
+		footer
+			.container
+				.row
+					.col-md-4
+						span.copyright Copyright &copy; Your Website 2014
+					.col-md-4
+						ul.list-inline.social-buttons
+							li: a.fa.fa-twitter(href="#")
+							li: a.fa.fa-facebook(href="#")
+							li: a.fa.fa-linkedin(href="#")
+					.col-md-4
+						ul.list-inline.quicklinks
+							li: a(href="#") Privacy Policy
+							li: a(href="#") Terms of use
+
+
+
+
+
+
+
+
+
+		script(src='./js/bootstrap.min.js')
+		script(src='./js/jquery.js')
+		script(src='./js/agency.js')
+		script(src='./js/bootstrap.js')
+		script(src='./js/jqBootstrapValidation.js')
+		script(src='./js/classie.js')
+		script(src='./js/contact_me.js')
+		script(src='./cbp-animatedHeader.min.js')

@@ -1,0 +1,171 @@
+::selection {
+    text-shadow: none;
+    background: $amarillo;
+}
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar-default {
+    border-color: transparent;
+    background-color: $negro;
+    .navbar-brand {
+	    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+	    color: $amarillo;
+	    &:hover, &:focus, &:active{
+		    color: $amarillo-oscuro;
+		}
+	}
+	.navbar-collapse {
+	    border-color: rgba(255,255,255,.02);
+	}
+	.navbar-toggle {
+	    border-color: $amarillo;
+	    background-color: $amarillo;
+	    .icon-bar {
+		    background-color: $blanco;
+		}
+		&:hover, &:focus {
+		    background-color: $amarillo;
+		}
+	}
+	.nav li a {
+	    text-transform: uppercase;
+	    font-family: $fuente-montserrat;
+	    font-weight: 400;
+	    letter-spacing: 1px;
+	    color: $blanco;
+	    &:hover,&:focus {
+		    outline: 0;
+		    color: $amarillo;
+		}
+	}
+}
+
+.navbar-default .navbar-nav>.active>a {
+    border-radius: 0;
+    color: $blanco;
+    background-color: $amarillo;
+    &:hover,&:focus {
+	    color: $blanco;
+	    background-color: $amarillo-oscuro;
+	}
+}
+header {
+    text-align: center;
+    color: $blanco;
+    background-attachment: scroll;
+    background-image: url(../../img/header-bg.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    .intro-text {
+	    padding-top: 100px;
+	    padding-bottom: 50px;
+	    .intro-lead-in {
+		    margin-bottom: 25px;
+		    font-family: $fuente-droit;
+		    font-size: 22px;
+		    font-style: italic;
+		    line-height: 22px;
+		}
+		.intro-heading {
+		    margin-bottom: 25px;
+		    text-transform: uppercase;
+		    font-family: $fuente-montserrat;
+		    font-size: 50px;
+		    font-weight: 700;
+		    line-height: 50px;
+		}
+	}
+}
+.btn-primary {
+    border-color: $amarillo;
+    text-transform: uppercase;
+    font-family: $fuente-montserrat;
+    font-weight: 700;
+    color: $blanco;
+    background-color: $amarillo;
+    &:hover, &:focus, &:active, &.open .dropdown-toggle{
+	    border-color: $amarillo-darken;
+	    color: $blanco;
+	    background-color: $amarillo-oscuro;
+	}
+	&:active, .active, &.open .dropdown-toggle {
+	    background-image: none;
+	}
+	.badge {
+	    color: $amarillo;
+	    background-color: $blanco;
+	}
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    border-color: $amarillo;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: $fuente-montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    color: $blanco;
+    background-color: $amarillo;
+    &:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.open .dropdown-toggle{
+	    border-color: $amarillo-darken;
+	    color: $blanco;
+	    background-color: transparent;
+	}
+	&:active,
+	&.active,
+	&.open .dropdown-toggle{
+	    background-image: none;
+	}
+	.badge {
+	    color: $amarillo;
+	    background-color: $blanco;
+	}
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        .navbar-brand {
+	        font-size: 2em;
+	    }
+		  .navbar-nav>.active>a {
+	        border-radius: 3px;
+	    }
+    }
+    .navbar-shrink {
+	        padding: 15px 0;
+	        background-color: $negro;
+	}
+    header{
+	    .intro-text {
+	        padding-top: 300px;
+	        padding-bottom: 200px;
+	        .intro-lead-in {
+		        margin-bottom: 25px;
+		        font-family: $fuente-droit;
+		        font-size: 40px;
+		        font-style: italic;
+		        line-height: 40px;
+		    }
+		    .intro-heading {
+		        margin-bottom: 50px;
+		        text-transform: uppercase;
+		        font-family: $fuente-montserrat;
+		        font-size: 75px;
+		        font-weight: 700;
+		        line-height: 75px;
+		    }
+	    }
+	}
+}
+

@@ -1,0 +1,14 @@
+@mixin flexing{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//extend
+.form-control{
+	height: 55px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 13px !important;
+    font-weight: 700;
+}
